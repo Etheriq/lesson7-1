@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290A38611C08BA0D006EC2BF /* CustomImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 290A38601C08BA0D006EC2BF /* CustomImageCollectionViewCell.m */; };
 		294F95C21C08565100229CCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 294F95C11C08565100229CCC /* main.m */; };
 		294F95C51C08565100229CCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 294F95C41C08565100229CCC /* AppDelegate.m */; };
 		294F95C81C08565100229CCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294F95C71C08565100229CCC /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290A385F1C08BA0D006EC2BF /* CustomImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageCollectionViewCell.h; sourceTree = "<group>"; };
+		290A38601C08BA0D006EC2BF /* CustomImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageCollectionViewCell.m; sourceTree = "<group>"; };
 		294F95BD1C08565100229CCC /* lesson7_task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lesson7_task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		294F95C11C08565100229CCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		294F95C31C08565100229CCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				294F95C71C08565100229CCC /* ViewController.m */,
 				294F95D71C087F5A00229CCC /* GalleryViewController.h */,
 				294F95D81C087F5A00229CCC /* GalleryViewController.m */,
+				290A385F1C08BA0D006EC2BF /* CustomImageCollectionViewCell.h */,
+				290A38601C08BA0D006EC2BF /* CustomImageCollectionViewCell.m */,
 				294F95C91C08565100229CCC /* Main.storyboard */,
 				294F95CC1C08565100229CCC /* Assets.xcassets */,
 				294F95CE1C08565100229CCC /* LaunchScreen.storyboard */,
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				294F95C81C08565100229CCC /* ViewController.m in Sources */,
+				290A38611C08BA0D006EC2BF /* CustomImageCollectionViewCell.m in Sources */,
 				294F95D91C087F5A00229CCC /* GalleryViewController.m in Sources */,
 				294F95C51C08565100229CCC /* AppDelegate.m in Sources */,
 				294F95C21C08565100229CCC /* main.m in Sources */,
@@ -305,6 +311,7 @@
 				294F95D61C08565100229CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

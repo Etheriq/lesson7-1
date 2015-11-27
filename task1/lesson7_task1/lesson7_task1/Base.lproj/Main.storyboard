@@ -84,29 +84,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UbI-fK-4qJ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UbI-fK-4qJ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.97525882105484785" green="0.95670028051902567" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g79-N2-ahp">
-                                    <size key="itemSize" width="247" height="234"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="icq-zS-vMU">
+                                    <size key="itemSize" width="248" height="285"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="Brv-RH-mgK">
-                                        <rect key="frame" x="0.0" y="64" width="247" height="234"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="img" id="Brv-RH-mgK" customClass="CustomImageCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="158" width="248" height="285"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="247" height="234"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="248" height="285"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wac-rm-QRS">
+                                                    <rect key="frame" x="8" y="8" width="232" height="269"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Wac-rm-QRS" secondAttribute="trailing" id="9JS-SI-TMF"/>
+                                            <constraint firstItem="Wac-rm-QRS" firstAttribute="leading" secondItem="Brv-RH-mgK" secondAttribute="leadingMargin" id="SzB-Jw-miG"/>
+                                            <constraint firstItem="Wac-rm-QRS" firstAttribute="top" secondItem="Brv-RH-mgK" secondAttribute="topMargin" id="Vf2-Ic-WTI"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Wac-rm-QRS" secondAttribute="bottom" id="wrn-pD-MY4"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="Wac-rm-QRS" id="Jk8-lr-awP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Yv-Yf-YWF" id="uwa-9Q-rNu"/>
+                                    <outlet property="delegate" destination="4Yv-Yf-YWF" id="cZw-Bu-XIB"/>
+                                </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wG6-4G-T0p">
                                 <rect key="frame" x="281" y="543" width="39" height="37"/>
@@ -125,6 +144,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionview" destination="UbI-fK-4qJ" id="Lv2-BM-xJk"/>
                         <outlet property="pager" destination="wG6-4G-T0p" id="otM-lz-msB"/>
                     </connections>
                 </viewController>
