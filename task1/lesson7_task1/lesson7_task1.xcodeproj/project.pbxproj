@@ -13,6 +13,7 @@
 		294F95CB1C08565100229CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294F95C91C08565100229CCC /* Main.storyboard */; };
 		294F95CD1C08565100229CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294F95CC1C08565100229CCC /* Assets.xcassets */; };
 		294F95D01C08565100229CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294F95CE1C08565100229CCC /* LaunchScreen.storyboard */; };
+		294F95D91C087F5A00229CCC /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294F95D81C087F5A00229CCC /* GalleryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		294F95CC1C08565100229CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294F95CF1C08565100229CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		294F95D11C08565100229CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		294F95D71C087F5A00229CCC /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		294F95D81C087F5A00229CCC /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				294F95C41C08565100229CCC /* AppDelegate.m */,
 				294F95C61C08565100229CCC /* ViewController.h */,
 				294F95C71C08565100229CCC /* ViewController.m */,
+				294F95D71C087F5A00229CCC /* GalleryViewController.h */,
+				294F95D81C087F5A00229CCC /* GalleryViewController.m */,
 				294F95C91C08565100229CCC /* Main.storyboard */,
 				294F95CC1C08565100229CCC /* Assets.xcassets */,
 				294F95CE1C08565100229CCC /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				294F95C81C08565100229CCC /* ViewController.m in Sources */,
+				294F95D91C087F5A00229CCC /* GalleryViewController.m in Sources */,
 				294F95C51C08565100229CCC /* AppDelegate.m in Sources */,
 				294F95C21C08565100229CCC /* main.m in Sources */,
 			);

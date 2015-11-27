@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "GalleryViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *imageCountLabel;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
+@property (weak, nonatomic) IBOutlet UIButton *showButton;
 
 @property(strong, nonatomic) NSMutableArray *picturesArray;
 @property(assign, nonatomic) NSUInteger firstStepperValue;
@@ -35,6 +37,10 @@
     }
     
     [self showCurrentPictureCount];
+    
+    self.showButton.layer.borderWidth = 1.f;
+    self.showButton.layer.cornerRadius = 10.f;
+    self.showButton.layer.borderColor = [[UIColor blackColor] CGColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,6 +90,21 @@
 }
 
 - (IBAction)showPictureButton:(UIButton *)sender {
+    
+    [self performSegueWithIdentifier:@"show_galery" sender:nil];
+    
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"show_galery"]) {
+        
+        GalleryViewController *controller = segue.destinationViewController;
+        controller.picturesArray = self.picturesArray;
+        
+    }
 }
 
 @end
