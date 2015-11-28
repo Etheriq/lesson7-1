@@ -74,8 +74,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+ 
     Product *product = [self.purchases objectAtIndex:indexPath.row];
     product.isBuyed = !product.isBuyed;
+    
+    cell.textLabel.textColor = product.isBuyed ? [UIColor greenColor] : [UIColor blackColor];
+    
     [tableView reloadData];
     
     NSLog(@"taped at %ld, title = %@", (long)indexPath.row, product.title);
@@ -90,8 +96,10 @@
     
     if (product.isBuyed) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.textLabel.textColor = [UIColor greenColor];
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.textLabel.textColor = [UIColor blackColor];
     }
     
     return cell;
