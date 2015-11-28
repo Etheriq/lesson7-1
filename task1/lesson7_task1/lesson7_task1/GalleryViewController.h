@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GalleryViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface GalleryViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property(strong, nonatomic) NSMutableArray *picturesArray;
 
