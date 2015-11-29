@@ -89,11 +89,18 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+
+    static NSString *identifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+
     Product *product = [self.purchases objectAtIndex:indexPath.row];
-    
     cell.textLabel.text = product.title;
-    
+
     if (product.isBuyed) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         cell.textLabel.textColor = [UIColor greenColor];
